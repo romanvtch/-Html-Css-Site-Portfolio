@@ -1,3 +1,4 @@
+            // first page Popup
 const popupbg = document.getElementById('popup__bg');
 const popup = document.getElementById('popup');
 const openPoput = document.getElementById('openPopup');
@@ -32,7 +33,6 @@ document.addEventListener('click', (e) =>{
     }
 });
             // MainPopup
-
 const popupbgMain = document.getElementById('popupbg__main');
 const popupMain = document.getElementById('popup__main');
 const openPopupMain = document.getElementById('openPopupMain');
@@ -67,9 +67,6 @@ document.addEventListener('click', (e) =>{
     }
 });
 
-
-
-
             // preloader
 window.onload = function() {
     let preloader = document.getElementById('preloader');
@@ -77,7 +74,28 @@ window.onload = function() {
     setInterval(function() {
           preloader.classList.add('preloader-hidden');
     }, 990);
+};
+            //Slider
+if( window.innerWidth >= 420 ){
+    $('.rev_slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        
+    })
 }
+else{
+    $('.rev_slider').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        
+    })
+}
+            //EndSlider
+
 
 // const butt = document.getElementById('button');
 // const main = document.getElementById('main');

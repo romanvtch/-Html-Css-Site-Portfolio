@@ -304,7 +304,8 @@ main{
     position: absolute;
     bottom: 10%;
     left: 50%;
-    width: auto;
+    max-width: 600px;
+    width: 85%;
     padding: 25px;
     text-align: center;
     line-height: 30px;
@@ -374,7 +375,7 @@ main{
     top: 10px;
     right: 5px;
 }
-.skills{
+.rev_slider{
     display: flex;
     justify-content: space-between;
 }
@@ -382,16 +383,13 @@ main{
     display: inline-flex;
     align-items: center;
     width: 100px;
-    border: 2px solid red;
+    margin: auto;
 }
 .skills__block{
     display: flex;
 }
 @media(max-width:1024px){
-    #hide_social__main.active{
-        display: none;
-    }
-
+    #hide_social__main.active{display: none;}
 }
 @media(max-width:960px){
     .container__open__info__main::before{top: -30px;left:30%;}
