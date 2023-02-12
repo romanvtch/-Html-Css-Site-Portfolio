@@ -1,2 +1,0 @@
-# Info About MEgit 
-
