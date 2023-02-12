@@ -18,6 +18,38 @@ body{
     font-family: 'Bebas Neue', cursive;
     background-color: black;
 }
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(11,9,52);
+    background: -moz-linear-gradient(top,  rgba(11,9,52,1) 34%, rgba(16,9,58,1) 48%, rgba(19,9,60,1) 53%, rgba(27,8,70,1) 56%); 
+    background: -webkit-linear-gradient(top,  rgba(11,9,52,1) 34%,rgba(16,9,58,1) 48%,rgba(19,9,60,1) 53%,rgba(27,8,70,1) 56%); 
+    background: linear-gradient(to bottom,  rgba(11,9,52,1) 34%,rgba(16,9,58,1) 48%,rgba(19,9,60,1) 53%,rgba(27,8,70,1) 56%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b0934', endColorstr='#1b0846',GradientType=0 ); 
+    z-index: 999;
+}
+#preloader.hide-preloader {
+    animation: hidePreloader 1s;
+}
+
+#preloader.preloader-hidden {
+    display: none;
+}
+
+@keyframes hidePreloader {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
 .header{
     height:100vh;
     max-width: 100vw;

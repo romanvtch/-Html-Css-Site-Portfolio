@@ -8,7 +8,11 @@
     <title>Contact</title>
 </head>
 <body>
+    <div id='preloader'>
+        <img src="img/preloader/rocket.gif" alt="preloader">
+    </div>
     <header class="header">
+        <div class="back"><a href="index.html">< go back</a></div>
         <div class="header__container">
                 <!-- headerText -->
             <div class="container__text">
@@ -18,25 +22,26 @@
             </div>
                  <!-- containerContactFORM -->
             <div class="containerContact">
-               <div class="form">
                 <form action="#" id="form" class="form__body">
-                    <h1 class="form__tittle">Sent data to mail</h1>
                     <div class="form__item">
                         <label for="formName" class="form__label">Name*:</label>
                         <input id="formName" type="text" name="name" class="form__input">
                     </div>
+                    
                         <label for="formEmail" class="form__label">Email*:</label>
                         <input id="formEmail" type="text" name="email" class="form__input">
 
                     <div class="form__item">
                         <label for="formMessage" class="form__label">Message*:</label>
+                        <textarea name="message" id="formMessage" class="form__input"></textarea>
                     </div>
+                    <button class="form__button">Send</button>
                 </form>
-               </div>
             </div>
 
 
         </div>
     </header>
+    <script src="js/contact.js"></script>
 </body>
 </html>
