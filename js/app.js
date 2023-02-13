@@ -1,5 +1,6 @@
 
-// first page Popup
+document.addEventListener('DOMContentLoaded', function(){
+    // first page Popup
 const popupbg = document.getElementById('popup__bg');
 const popup = document.getElementById('popup');
 const openPoput = document.getElementById('openPopup');
@@ -68,9 +69,10 @@ document.addEventListener('click', (e) =>{
     }
 });
 
+
             // preloader
 window.onload = function() {
-    let preloader = document.getElementById('preloader');
+    const preloader = document.getElementById('preloader');
     preloader.classList.add('hide-preloader');
     setInterval(function() {
           preloader.classList.add('preloader-hidden');
@@ -83,7 +85,7 @@ if( window.innerWidth >= 420 ){
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 1000,
-       
+ 
     })
 }
 else{
@@ -96,21 +98,30 @@ else{
     })
 };
             //EndSlider
+
+            // Navigation circle
 const one = document.getElementById('one');
 const header = document.getElementById('header');
             
     one.addEventListener('click',() =>{
+        one.classList.add('active');
+        two.classList.remove('active');
+        three.classList.remove('active');
         header.scrollIntoView({
-         block:'nearest',
+        block:'nearest',
         behavior: 'smooth',
     });
 });
+
 const two = document.getElementById('two');
 const main = document.getElementById('main');
             
     two.addEventListener('click',() =>{
+        one.classList.remove('active');
+        two.classList.add('active');
+        three.classList.remove('active');
         main.scrollIntoView({
-         block:'nearest',
+        block:'nearest',
         behavior: 'smooth',
     });
 });
@@ -119,11 +130,17 @@ const three = document.getElementById('three');
 const mainAfter = document.getElementById('mainAfter');
             
     three.addEventListener('click',() =>{
+        one.classList.remove('active');
+        two.classList.remove('active');
+        three.classList.add('active');
         mainAfter.scrollIntoView({
-         block:'nearest',
+        block:'nearest',
         behavior: 'smooth',
     });
 });
+
+});
+
 
 
 

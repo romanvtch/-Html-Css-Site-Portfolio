@@ -116,6 +116,9 @@ body{
     background-color: #ceb7ffd5;
     border-radius: 10px;
 }
+.form__input._eror{
+    box-shadow: 0 0 15px red;
+}
 .form__input:focus{
     filter: drop-shadow(0px 0px 4px #B377FF);
 }
