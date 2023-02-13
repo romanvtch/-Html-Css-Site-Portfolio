@@ -1,4 +1,5 @@
-            // first page Popup
+
+// first page Popup
 const popupbg = document.getElementById('popup__bg');
 const popup = document.getElementById('popup');
 const openPoput = document.getElementById('openPopup');
@@ -78,11 +79,11 @@ window.onload = function() {
             //Slider
 if( window.innerWidth >= 420 ){
     $('.rev_slider').slick({
-        slidesToShow: 4,
+        slidesToShow: 5,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 1000,
-        
+       
     })
 }
 else{
@@ -90,23 +91,39 @@ else{
         slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 1000,
+        autoplaySpeed: 500,
         
     })
-}
+};
             //EndSlider
+const one = document.getElementById('one');
+const header = document.getElementById('header');
+            
+    one.addEventListener('click',() =>{
+        header.scrollIntoView({
+         block:'nearest',
+        behavior: 'smooth',
+    });
+});
+const two = document.getElementById('two');
+const main = document.getElementById('main');
+            
+    two.addEventListener('click',() =>{
+        main.scrollIntoView({
+         block:'nearest',
+        behavior: 'smooth',
+    });
+});
 
-
-// const butt = document.getElementById('button');
-// const main = document.getElementById('main');
-
-// butt.addEventListener('click',() =>{
-//     main.scrollIntoView({
-//         block:'nearest',
-//         behavior: 'smooth',
-//     });
-// });
-
+const three = document.getElementById('three');
+const mainAfter = document.getElementById('mainAfter');
+            
+    three.addEventListener('click',() =>{
+        mainAfter.scrollIntoView({
+         block:'nearest',
+        behavior: 'smooth',
+    });
+});
 
 
 

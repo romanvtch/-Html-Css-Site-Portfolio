@@ -5,3 +5,9 @@ window.onload = function() {
           preloader.classList.add('preloader-hidden');
     }, 990);
 };
+const form = document.getElementById('form');
+form.addEventListener('submit', forSend);
+
+function forSend(){
+    
+}

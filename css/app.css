@@ -15,8 +15,11 @@
 .line__bottom{margin: auto;width:35%;border: 1px solid #CEB7FF;box-shadow: 0px 0px 5px #CEB7FF;}
 
 body{
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
     font-family: 'Bebas Neue', cursive;
     background-color: black;
+    /* overflow: hidden; */
 }
 #preloader {
     position: fixed;
@@ -49,6 +52,19 @@ body{
     100% {
         opacity: 0;
     }
+}
+.nav{
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 999;
+}
+ul li{
+    color: white;
+    font-size: 18px;
+    list-style: none;
 }
 .header{
     height:100vh;
@@ -264,15 +280,16 @@ body{
     }}
 
 
-main{
+.main{
     height:100vh;
     max-width: 100vw;
+    min-height: 100vh;
     background: url(/img/two/bg.png);
     background-color: black;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    overflow: hidden;  
+    
 }
 .main__container{
     margin: auto;
@@ -280,7 +297,6 @@ main{
     max-width: 1440px;
     padding: 10px 10px;  
     position: relative;
-    border: 2px solid red;
 }
 
 .popupbg__main{
@@ -302,7 +318,7 @@ main{
 }
 .popup__main{
     position: absolute;
-    bottom: 10%;
+    bottom: 0;
     left: 50%;
     max-width: 600px;
     width: 85%;
@@ -345,6 +361,15 @@ main{
     bottom: 130px;
     right: 0;
     left: 0; 
+}
+.next{
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+    left: 0;  
 }
 .container__open__info__main::before{
     content: url('../img/one/text1.png');
@@ -403,4 +428,23 @@ main{
 @media(max-width:320px){
     .container__open__info__main::before{top: -40px;left:60px;}
     .container__open__info__main::after{bottom: -40px;right:60px;}
+}
+
+            /* Page 3 */
+.mainAfter{
+    height:100vh;
+    max-width: 100vw;
+    background: url(/img/three/bg.png);
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;  
+}
+.after__container{
+    margin: auto;
+    height: 100%;
+    max-width: 1440px;
+    padding: 10px 10px;  
+    position: relative;
 }
